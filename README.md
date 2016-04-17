@@ -31,4 +31,8 @@ If you would like the command lookup to work you need to add MXTOOLBOX_API_KEY v
 
 ### Copyright & License
 
+driftbot Copyright John Henriksson, 2016
+
+slack-bot-server Copyright [Daniel Doubrovkine](http://code.dblock.org), 2015-2016
+
 [MIT License](LICENSE)
