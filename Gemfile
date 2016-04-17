@@ -17,6 +17,7 @@ gem 'newrelic-slack-ruby-bot'
 gem 'rack-rewrite'
 gem 'rack-server-pages'
 gem 'gctools', require: 'gctools/oobgc'
+gem 'httparty'
 
 group :development, :test do
   gem 'rake', '~> 10.4'

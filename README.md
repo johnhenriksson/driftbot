@@ -1,15 +1,15 @@
 Slack Bot Server
 ================
 
-[![Build Status](https://travis-ci.org/dblock/slack-bot-server.svg?branch=master)](https://travis-ci.org/dblock/slack-bot-server)
-[![Dependency Status](https://gemnasium.com/dblock/slack-bot-server.svg)](https://gemnasium.com/dblock/slack-bot-server)
-[![Code Climate](https://codeclimate.com/github/dblock/slack-bot-server.svg)](https://codeclimate.com/github/dblock/slack-bot-server)
+[![Build Status](https://travis-ci.org/dblock/driftbot.svg?branch=master)](https://travis-ci.org/dblock/driftbot)
+[![Dependency Status](https://gemnasium.com/dblock/driftbot.svg)](https://gemnasium.com/dblock/driftbot)
+[![Code Climate](https://codeclimate.com/github/dblock/driftbot.svg)](https://codeclimate.com/github/dblock/driftbot)
 
 An opinionated boilerplate and demo for a complete Slack bot service with Slack button integration, in Ruby. A good demo of a service built on top of this is [playplay.io](http://playplay.io).
 
 ### Try Me
 
-A demo version of this app is running on Heroku at [slack-bot-server.herokuapp.com](https://slack-bot-server.herokuapp.com). Use the _Add to Slack_ button. The bot will join your team as _@slackbotserver_.
+A demo version of this app is running on Heroku at [driftbot.herokuapp.com](https://driftbot.herokuapp.com). Use the _Add to Slack_ button. The bot will join your team as _@slackbotserver_.
 
 ![](images/slackbutton.gif)
 

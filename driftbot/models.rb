@@ -1,0 +1,1 @@
+require 'driftbot/models/team'

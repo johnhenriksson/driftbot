@@ -3,7 +3,7 @@ module SlackBotServer
     class Help < SlackRubyBot::Commands::Base
       HELP = <<-EOS
 ```
-I am your friendly slack-bot-server, here to help.
+I am your friendly driftbot, here to help.
 
 General
 -------
