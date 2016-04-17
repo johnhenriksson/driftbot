@@ -8,14 +8,25 @@ I am your friendly driftbot, here to help.
 General
 -------
 
-help               - get this helpful message
-whoami             - print your username
+@driftbot help               - get this helpful message
+@driftbot whoami             - print your username
 
+Lookup
+-------
+Just typ lookup type:FQDN eg. lookup a:google.com and it returns the IP of the FQDN.
+
+Allowed types are a: and mx:
+
+The lookup service is powered by mxtoolbox.com
+
+Whatsmyip
+-------
+
+Just type whatsmyip and you get your current IP, works both with IPv6 and IPv4.
 ```
 EOS
       def self.call(client, data, _match)
         client.say(channel: data.channel, text: [HELP, SlackBotServer::INFO].join("\n"))
-        client.say(channel: data.channel, gif: 'help')
         logger.info "HELP: #{client.owner}, user=#{data.user}"
       end
     end

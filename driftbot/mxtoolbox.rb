@@ -7,11 +7,8 @@ class MXToolbox
 
 	response = HTTParty.get(api_url, headers: {"Authorization" => "#{api_key}"})
 	
-	if type == 'a'
-		return response.parsed_response["Information"][0]["IP Address"]
-	else
-		return "Error wrong type"
-	end
+	return response.parsed_response["Information"]
+
 	end
 
 end
