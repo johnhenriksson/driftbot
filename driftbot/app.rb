@@ -32,7 +32,7 @@ module SlackBotServer
 
     def check_mongodb_provider!
       return unless ENV['RACK_ENV'] == 'production'
-      fail "Missing ENV['MONGO_URI']." unless ENV['MONGO_URI']
+      fail "Missing ENV['MONGODB_URI']." unless ENV['MONGODB_URI']
     end
 
     def check_database!
