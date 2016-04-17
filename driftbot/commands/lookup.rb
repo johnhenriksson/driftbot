@@ -4,14 +4,22 @@ module SlackBotServer
     require 'driftbot/mxtoolbox'
     require 'json'
 
-      match /^lookup (?<type>.*?):<http:\/\/.*?\|(?<host>.*?)\>$/ do |client, data, match|
+      match /^lookup (?<type>.*?):(?<target>.*?)$/ do |client, data, match|
 
-        if match[:type] == 'a' || match[:type] == 'mx'
+        if match[:type] == 'a' || match[:type] == 'mx' || match[:type] == 'ptr'
+          if match[:type] != 'ptr'
+          target = match[:target].match(/(?<=\|)(.*?)(?=\>)/)
+        else
+          target = match[:target]
+        end
+          result = MXToolbox.lookup(match[:type], target)
+
+          client.say(channel: data.channel, text: "#{target} #{result.to_yaml}")
+        elsif match[:type] == 'mac'
+
+          response = HTTParty.get("http://macvendors.co/api/#{match[:target]}")
           
-          result = MXToolbox.lookup(match[:type], match[:host])
-          pretty = result.each {|k, v| print k, " ", v, "\n"}
-
-          client.say(channel: data.channel, text: "#{match[:host]} #{result.to_yaml}")
+          client.say(channel: data.channel, text: response["result"]["company"])
         else
           client.say(channel: data.channel, text: "Wrong lookup type, try again.", gif: 'idiot')
         end 

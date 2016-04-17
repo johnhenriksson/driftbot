@@ -15,7 +15,7 @@ Lookup
 -------
 Just typ lookup type:FQDN eg. lookup a:google.com and it returns the IP of the FQDN.
 
-Allowed types are a: and mx:
+Allowed types are a:,ptr: , mac: and mx:
 
 The lookup service is powered by mxtoolbox.com
 
